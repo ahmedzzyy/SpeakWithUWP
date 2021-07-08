@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <TextBox x:Name="textToSpeech" MaxWidth="400" HorizontalAlignment="Center" Margin="0,0,0,80"  PlaceholderText="Enter some text" TextWrapping="Wrap" VerticalAlignment="Center"/>
         <Button x:Name="button" Content="Hello, world!" HorizontalAlignment="Center" Margin = "0,80,0,0" VerticalAlignment="Center" Click="Button_Click"/>
     </Grid>
 </Page>
