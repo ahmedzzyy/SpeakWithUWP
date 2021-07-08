@@ -29,11 +29,18 @@ namespace Speak_with_UWP
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            MediaElement mediaElement = new MediaElement();
-            var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
-            Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync(textToSpeech.Text);
-            mediaElement.SetSource(stream, stream.ContentType);
-            mediaElement.Play();
+            if (textToSpeech.Text != null && textToSpeech.Text != "")
+            {
+                MediaElement mediaElement = new MediaElement();
+                var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
+                Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync(textToSpeech.Text);
+                mediaElement.SetSource(stream, stream.ContentType);
+                mediaElement.Play();
+            }
+            else
+            {
+                error.Text = "Please enter something to speak";
+            }
         }
     }
 }
