@@ -7,4 +7,4 @@ https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-hello-world-ap
 
 ## What is the project about?
 
-Even thought the tutorial is good at introducing new Developers to UWP, there are many improvements that can be done upon it.
+Younger me's approach to the tutorial.
